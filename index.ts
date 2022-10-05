@@ -42,7 +42,7 @@ function printResults(reindeers: Reinder[], duration: number): void {
   console.log("#################################");
   reindeers
     .map((reindeer: Reinder) => reindeer.race(duration))
-    .sort((r1: RaceResult, r2: RaceResult) => r1.totalDistance - r2.totalDistance)
+    .sort((r1: RaceResult, r2: RaceResult) => r2.totalDistance - r1.totalDistance)
     .forEach((result: RaceResult, index: number) => console.log(`${index}. ${result.reindeerName} made ${result.totalDistance} km in ${duration} seconds.`));
 }
 
